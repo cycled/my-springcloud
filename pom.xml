@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cycle.springcloud</groupId>
+	<artifactId>my-springcloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java_source_version>1.8</java_source_version>
+		<java_target_version>1.8</java_target_version>
+		<java.version>1.8</java.version>
+		<encoding>UTF-8</encoding>
+		<file.encoding>UTF-8</file.encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+		<maven.jar.plugin.version>2.6</maven.jar.plugin.version>
+		
+		<springboot.version>1.4.3.RELEASE</springboot.version>
+		<springloaded.version>1.2.6.RELEASE</springloaded.version>
+		<maven.jar.plugin.version>2.6</maven.jar.plugin.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+		        <groupId>org.springframework.cloud</groupId>
+		        <artifactId>spring-cloud-dependencies</artifactId>
+		        <version>Camden.SR4</version>
+		        <type>pom</type>
+		        <scope>import</scope>
+		    </dependency>
+		</dependencies>
+	</dependencyManagement>	
+	
+	<!-- <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven.jar.plugin.version}</version>
+					<configuration>
+						<finalName>${project.artifactId}</finalName>
+						<outputDirectory>${session.executionRootDirectory}/dist</outputDirectory>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>1.4.3.RELEASE</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>build-info</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<finalName>${project.artifactId}</finalName>
+						<outputDirectory>${session.executionRootDirectory}/dist</outputDirectory>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>org.springframework</groupId>
+							<artifactId>springloaded</artifactId>
+							<version>${springloaded.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.3</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build> -->
+	
+	<modules>
+		<module>microservice-simple-parent</module>
+		<module>microservice-discovery-parent</module>
+		<module>microservice-provider-parent</module>
+		<module>microservice-consumer-parent</module>
+	</modules>
+</project>
