@@ -18,5 +18,6 @@
     <module>microservice-consumer-movie-feign-customizing</module>
     <module>microservice-consumer-movie-feign-manual</module>
     <module>microservice-consumer-movie-ribbon-hystrix</module>
+    <module>microservice-consumer-movie-feign-hystrix-fallback</module>
   </modules>
 </project>
