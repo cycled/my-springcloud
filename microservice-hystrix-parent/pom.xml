@@ -10,4 +10,7 @@
   <artifactId>microservice-hystrix-parent</artifactId>
   <packaging>pom</packaging>
   <description>hystrix断路器监控模块</description>
+  <modules>
+  	<module>microservice-hystrix-dashboard</module>
+  </modules>
 </project>
