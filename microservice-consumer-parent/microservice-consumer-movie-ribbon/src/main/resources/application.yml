@@ -14,10 +14,10 @@ eureka:
   instance:
     prefer-ip-address: true 
 
-microservice-provider-user: 
-  ribbon: 
-    ConnectTimeout: 250 
-    ReadTimeout: 1000 
-    OkToRetryOnAllOperations: true 
-    MaxAutoRetriesNextServer: 2 
-    MaxAutoRetries: 1
+## microservice-provider-user: 
+##  ribbon: 
+##    ConnectTimeout: 250 
+##    ReadTimeout: 1000 
+##    OkToRetryOnAllOperations: true 
+##    MaxAutoRetriesNextServer: 2 
+##    MaxAutoRetries: 1
