@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>microservice-consumer-movie-ribbon-customizing</artifactId>
-  <name>microservice-consumer-movie-ribbon</name>
+  <name>microservice-consumer-movie-ribbon-customizing</name>
   <packaging>jar</packaging>
   <description>基于ribbon实现自定义规则的负载均衡</description>
   

@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.cycle.springcloud.user.entity.User;
-import com.google.gson.Gson;
 
 @RestController
 public class MovieController {
   
-  private final Logger logger = LoggerFactory.getLogger(getClass());
+  final Logger logger = LoggerFactory.getLogger(getClass());
   
   @Autowired
   private RestTemplate restTemplate;
@@ -22,7 +21,6 @@ public class MovieController {
   @GetMapping("/user/{id}")
   public User findById(@PathVariable Long id) {
 	User u = this.restTemplate.getForObject("http://localhost:8000/" + id, User.class);
-	logger.info("info:{}",new Gson().toJson(u));
     return u;
   }
 }

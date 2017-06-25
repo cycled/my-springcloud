@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>microservice-consumer-movie-ribbon-customizing-properties</artifactId>
-  <name>microservice-consumer-movie-ribbon</name>
+  <name>microservice-consumer-movie-ribbon-customizing-properties</name>
   <packaging>jar</packaging>
   <description>基于配置文件的属性配置ribbon实现随机算法负载均衡</description>
   
