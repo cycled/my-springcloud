@@ -95,5 +95,6 @@
 		<module>microservice-provider-parent</module>
 		<module>microservice-consumer-parent</module>
     <module>microservice-hystrix-parent</module>
+    <module>microservice-gateway-parent</module>
   </modules>
 </project>
