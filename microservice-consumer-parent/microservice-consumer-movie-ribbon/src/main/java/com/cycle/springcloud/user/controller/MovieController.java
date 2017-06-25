@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.cycle.springcloud.user.entity.User;
+import com.google.gson.Gson;
 
 @RestController
 public class MovieController {
@@ -25,7 +26,19 @@ public class MovieController {
 
   @GetMapping("/user/{id}")
   public User findById(@PathVariable Long id) {
-    return this.restTemplate.getForObject("http://microservice-provider-user/" + id, User.class);
+	logger.info("curr id:{}",id);
+    User u = this.restTemplate.getForObject("http://microservice-provider-user/" + id, User.class);
+    logger.info("info:{}",new Gson().toJson(u));
+    
+    // 测试超时
+//    try {
+//    	logger.info("sleep 5s");
+//		Thread.sleep(5000);
+//		logger.info("Sleep is over!");
+//	} catch (InterruptedException e) {
+//		e.printStackTrace();
+//	}
+    return u;
   }
   
   @GetMapping("/log-user-instance")

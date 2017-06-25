@@ -2,10 +2,22 @@ server:
   port: 8010
 spring:
   application:
-    name: microservice-consumer-movie
+    name: microservice-consumer-movie 
+  cloud: 
+    loadbalancer: 
+      retry: 
+        enabled: true
 eureka:
   client:
     serviceUrl:
       defaultZone: http://user:pwd123@localhost:8761/eureka/
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: true 
+
+microservice-provider-user: 
+  ribbon: 
+    ConnectTimeout: 250 
+    ReadTimeout: 1000 
+    OkToRetryOnAllOperations: true 
+    MaxAutoRetriesNextServer: 2 
+    MaxAutoRetries: 1
